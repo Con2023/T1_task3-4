@@ -1,5 +1,6 @@
 package com.example.Task1.Controllers;
 
+import com.example.Task1.CachedAnnotation;
 import com.example.Task1.Entities.Account;
 import com.example.Task1.Services.ServiceAccount;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,16 +17,19 @@ public class ControllerAccount {
         this.serviceAccount = serviceAccount;
     }
 
+    @CachedAnnotation
     @GetMapping("/{id}")
     public Account getAccountById(@PathVariable Long id) {
         return serviceAccount.getAccountById(id);
     }
 
+    @CachedAnnotation
     @PostMapping("/save")
     public void createAccount(@RequestBody Account account) {
         serviceAccount.saveAccount(account);
     }
 
+    @CachedAnnotation
     @PutMapping("/update/{id}")
     public void updateAccount(@PathVariable Long id, @RequestBody Account account) {
         serviceAccount.updateAccount(id, account);

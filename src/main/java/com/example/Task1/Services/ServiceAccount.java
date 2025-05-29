@@ -2,11 +2,15 @@ package com.example.Task1.Services;
 
 import com.example.Task1.DataSourceErrorLogAnnotation;
 import com.example.Task1.Entities.Account;
+import com.example.Task1.Metric;
 import com.example.Task1.Repositories.RepositoryAccount;
+import com.example.Task1.Repositories.RepositoryTransaction;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.PersistenceException;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.Random;
 
 
@@ -18,11 +22,14 @@ public class ServiceAccount {
     Random random = new Random();
 
     private final RepositoryAccount repositoryAccount;
+    private final RepositoryTransaction repositoryTransaction;
 
-    public ServiceAccount(RepositoryAccount repositoryAccount) {
+    public ServiceAccount(RepositoryAccount repositoryAccount, RepositoryTransaction repositoryTransaction) {
         this.repositoryAccount = repositoryAccount;
+        this.repositoryTransaction = repositoryTransaction;
     }
 
+    @Metric
     @DataSourceErrorLogAnnotation
     public Account getAccountById(Long id) {
         if (id == null) {
@@ -35,6 +42,7 @@ public class ServiceAccount {
                 .orElseThrow(() -> new EntityNotFoundException("Account with id " + id + " not found"));
     }
 
+    @Metric
     @DataSourceErrorLogAnnotation
     public void saveAccount(Account account) {
         if (account == null) {
@@ -50,14 +58,17 @@ public class ServiceAccount {
         }
     }
 
+    @Metric
     @DataSourceErrorLogAnnotation
     public void deleteAccountById(Long id) {
-        if (!repositoryAccount.existsById(id)) {
-            throw new RuntimeException("Account with id " + id + " not found");
-        }
-        repositoryAccount.deleteById(id);
+        Account account = repositoryAccount.findById(id)
+                .orElseThrow(() -> new RuntimeException("Account not found")); // Исключение пробрасывается
+
+        repositoryTransaction.deleteByAccountId(id);
+        repositoryAccount.delete(account);
     }
 
+    @Metric
     @DataSourceErrorLogAnnotation
     public void updateAccount(Long id, Account account) {
         Account existingAccount = repositoryAccount.findById(id)

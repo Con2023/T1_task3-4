@@ -7,6 +7,7 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,12 +18,12 @@ import java.util.stream.Collectors;
 //Прописываем аспект,
 @Aspect
 @Component
-@Transactional(propagation = Propagation.REQUIRES_NEW) // Объявляет, что для каждого метода,
+
 // где мы вызываем транзакцию будет новая сфера действия,
 // таким образом ошибки одной выявленные в результате выполнения одного
 // метода не будут влиять на другой.
 
-
+@Order(1)
 public class DataSourceErrorLogAspect {
 
     private final RepositoryDataSourceErrorLog errorLogRepository;

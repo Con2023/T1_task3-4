@@ -11,6 +11,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.NoSuchElementException;
+import com.example.Task1.Metric;
 
 @Service
 public class ServiceTransaction {
@@ -19,6 +20,15 @@ public class ServiceTransaction {
 
     public ServiceTransaction(RepositoryTransaction repoTransaction) {
         this.repoTransaction = repoTransaction;
+    }
+
+    @Metric
+    public void slowMethod() {
+        try {
+            Thread.sleep(1500); // Задержка 1.5 секунды (если лимит = 1000 мс)
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 
     @DataSourceErrorLogAnnotation
@@ -33,7 +43,7 @@ public class ServiceTransaction {
             repoTransaction.deleteById(id);
         } catch (EmptyResultDataAccessException | NoSuchElementException ex) {
             throw new EntityNotFoundException("Transaction with id " + id + " not found", ex);
-        } catch (DataIntegrityViolationException ex) {
+        } catch (Exception ex) {
             throw new RuntimeException("Cannot delete transaction with id " + id + " due to data integrity violation", ex);
         }
     }

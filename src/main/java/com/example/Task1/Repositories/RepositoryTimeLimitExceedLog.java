@@ -1,10 +1,9 @@
 package com.example.Task1.Repositories;
 
-import com.example.Task1.Entities.Transaction;
+import com.example.Task1.Entities.TimeLimitExceedLog;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RepositoryTransaction extends JpaRepository<Transaction, Long> {
-    void deleteByAccountId(Long id);
+public interface RepositoryTimeLimitExceedLog extends JpaRepository<TimeLimitExceedLog, Long> {
 }
