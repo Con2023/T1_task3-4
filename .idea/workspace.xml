@@ -5,55 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52ac719b-a923-4525-b176-6a43945e96e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/controllers/TransactionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/repositories/AccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/repositories/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/services/TimeLimitLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4b1807dc-2f87-4bf2-ba46-a9214b666354.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4b1807dc-2f87-4bf2-ba46-a9214b666354.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Controllers/ControllerAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/controllers/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Controllers/ControllerTransaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/DataSourceErrorLogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/DataSourceErrorLogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Entities/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/entities/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/entities/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Entities/DataSourceErrorLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/entities/DataSourceErrorLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Entities/TimeLimitExceedLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/entities/TimeLimitExceedLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Entities/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/entities/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/MetricAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/MetricAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Repositories/RepositoryAccount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Repositories/RepositoryClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Repositories/RepositoryDataSourceErrorLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/repositories/DataSourceErrorLogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Repositories/RepositoryTimeLimitExceedLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/repositories/TimeLimitExceedLogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Repositories/RepositoryTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/repositories/TransactionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Services/ServiceAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Services/ServiceTimeLimitLog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Services/ServiceTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/services/TransactionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/config/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/config/TestData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Task3/MetricAspectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Task3/MetricAspectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Controllers/ControllerAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Controllers/ControllerTransaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/DataSourceErrorLogAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/DataSourceErrorLogAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Account$AccountType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Account$AccountType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/DataSourceErrorLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/DataSourceErrorLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/TimeLimitExceedLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/TimeLimitExceedLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Transaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/MetricAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/MetricAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Repositories/RepositoryAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Repositories/RepositoryClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Repositories/RepositoryDataSourceErrorLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Repositories/RepositoryTimeLimitExceedLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Repositories/RepositoryTransaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Services/ServiceAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Services/ServiceTimeLimitLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Services/ServiceTransaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/config/TestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/config/TestData.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +28,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "HTTP Request.generated-requests | #57.executor": "Run",
+    "HTTP Request.generated-requests | #58.executor": "Run",
+    "HTTP Request.generated-requests | #59.executor": "Run",
     "JUnit.MetricAspectTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -99,7 +56,19 @@
       <recent name="C:\Users\sofia\Desktop\Task3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MetricAspectTest">
+  <component name="RunManager" selected="Spring Boot.Task3Application">
+    <configuration name="generated-requests | #57" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="57" requestIdentifier="#57" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #58" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="58" requestIdentifier="#58" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #59" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="59" requestIdentifier="#59" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #60" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="60" requestIdentifier="#60" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="MetricAspectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task3" />
       <extension name="coverage">
@@ -131,6 +100,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #60" />
+        <item itemvalue="HTTP Request.generated-requests | #59" />
+        <item itemvalue="HTTP Request.generated-requests | #58" />
+        <item itemvalue="HTTP Request.generated-requests | #57" />
         <item itemvalue="JUnit.MetricAspectTest" />
       </list>
     </recent_temporary>
@@ -158,7 +131,8 @@
       <workItem from="1748931592728" duration="416000" />
       <workItem from="1748932033455" duration="9000" />
       <workItem from="1748938514274" duration="78000" />
-      <workItem from="1748938607838" duration="1250000" />
+      <workItem from="1748938607838" duration="1431000" />
+      <workItem from="1748940049711" duration="301000" />
     </task>
     <servers />
   </component>
