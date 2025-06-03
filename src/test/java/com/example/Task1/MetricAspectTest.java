@@ -6,8 +6,6 @@ import com.example.Task1.repositories.TimeLimitExceedLogRepository;
 import com.example.Task1.services.TransactionService;
 =======
 import com.example.Task1.Entities.TimeLimitExceedLog;
-import com.example.Task1.Repositories.RepositoryTimeLimitExceedLog;
-import com.example.Task1.Services.ServiceTransaction;
 >>>>>>> ad223588ce4f39148a8cdf0697c063891461f79d
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
