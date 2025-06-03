@@ -5,9 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52ac719b-a923-4525-b176-6a43945e96e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/controllers/TransactionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/repositories/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/repositories/ClientRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/services/TimeLimitLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start-kafka.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/start-kafka.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Controllers/ControllerAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/controllers/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Controllers/ControllerTransaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/DataSourceErrorLogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/DataSourceErrorLogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Entities/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/entities/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/entities/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Entities/DataSourceErrorLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/entities/DataSourceErrorLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Entities/TimeLimitExceedLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/entities/TimeLimitExceedLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Entities/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/entities/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/MetricAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/MetricAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Repositories/RepositoryAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Repositories/RepositoryClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Repositories/RepositoryDataSourceErrorLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/repositories/DataSourceErrorLogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Repositories/RepositoryTimeLimitExceedLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/repositories/TimeLimitExceedLogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Repositories/RepositoryTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/repositories/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Services/ServiceAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/services/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Services/ServiceTimeLimitLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/Services/ServiceTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/services/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Task3/config/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Task3/config/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Task3/MetricAspectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Task3/MetricAspectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Controllers/ControllerAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Controllers/ControllerTransaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/DataSourceErrorLogAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/DataSourceErrorLogAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Account$AccountType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Account$AccountType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/DataSourceErrorLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/DataSourceErrorLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/TimeLimitExceedLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/TimeLimitExceedLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/Entities/Transaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/MetricAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/MetricAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Repositories/RepositoryAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Repositories/RepositoryClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Repositories/RepositoryDataSourceErrorLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Repositories/RepositoryTimeLimitExceedLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Repositories/RepositoryTransaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Services/ServiceAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Services/ServiceTimeLimitLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/Services/ServiceTransaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/Task3/config/TestData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/Task3/config/TestData.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,33 +72,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.MetricAspectTest.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Task3Application.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.TaskApplication.executor&quot;: &quot;Run&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sofia/Desktop/Task1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.MetricAspectTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Task1Application.executor": "Run",
+    "Spring Boot.Task3Application.executor": "Run",
+    "Spring Boot.TaskApplication.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sofia/Desktop/Task3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sofia\Desktop\Task3" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Task3Application">
+  <component name="RunManager" selected="JUnit.MetricAspectTest">
     <configuration name="MetricAspectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Task3" />
       <extension name="coverage">
@@ -64,6 +111,13 @@
       <option name="PACKAGE_NAME" value="com.example.Task3" />
       <option name="MAIN_CLASS_NAME" value="com.example.Task3.MetricAspectTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Task3Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Task3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Task3.Task3Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,6 +154,11 @@
       <workItem from="1748879572359" duration="484000" />
       <workItem from="1748880150092" duration="774000" />
       <workItem from="1748881203423" duration="850000" />
+      <workItem from="1748882064521" duration="180000" />
+      <workItem from="1748931592728" duration="416000" />
+      <workItem from="1748932033455" duration="9000" />
+      <workItem from="1748938514274" duration="78000" />
+      <workItem from="1748938607838" duration="1250000" />
     </task>
     <servers />
   </component>

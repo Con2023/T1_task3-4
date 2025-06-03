@@ -1,6 +1,6 @@
 package com.example.Task3;
 
-import com.example.Task3.Services.ServiceTimeLimitLog;
+import com.example.Task3.services.TimeLimitLogService;
 import org.springframework.beans.factory.annotation.Value;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -20,9 +20,9 @@ import org.springframework.transaction.annotation.Transactional;
 public class MetricAspect {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
-    public final ServiceTimeLimitLog serviceTimeLimitLog;
+    public final TimeLimitLogService serviceTimeLimitLog;
 
-    public MetricAspect(KafkaTemplate<String, String> kafkaTemplate, ServiceTimeLimitLog serviceTimeLimitLog) {
+    public MetricAspect(KafkaTemplate<String, String> kafkaTemplate, TimeLimitLogService serviceTimeLimitLog) {
         this.kafkaTemplate = kafkaTemplate;
         this.serviceTimeLimitLog = serviceTimeLimitLog;
     }

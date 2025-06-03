@@ -1,12 +1,11 @@
-package com.example.Task3.Services;
+package com.example.Task3.services;
 
 import com.example.Task3.DataSourceErrorLogAnnotation;
-import com.example.Task3.Entities.Transaction;
-import com.example.Task3.Repositories.RepositoryTransaction;
+import com.example.Task3.entities.Transaction;
+import com.example.Task3.repositories.TransactionRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.PersistenceException;
 import org.hibernate.exception.ConstraintViolationException;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
@@ -14,11 +13,11 @@ import java.util.NoSuchElementException;
 import com.example.Task3.Metric;
 
 @Service
-public class ServiceTransaction {
+public class TransactionService {
 
-    private final RepositoryTransaction repoTransaction;
+    private final TransactionRepository repoTransaction;
 
-    public ServiceTransaction(RepositoryTransaction repoTransaction) {
+    public TransactionService(TransactionRepository repoTransaction) {
         this.repoTransaction = repoTransaction;
     }
 

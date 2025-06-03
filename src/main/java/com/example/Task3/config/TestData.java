@@ -1,12 +1,13 @@
 package com.example.Task3.config;
 
-import com.example.Task3.Entities.Account;
-import com.example.Task3.Entities.Client;
-import com.example.Task3.Entities.Transaction;
-import com.example.Task3.Repositories.RepositoryAccount;
-import com.example.Task3.Repositories.RepositoryClient;
-import com.example.Task3.Repositories.RepositoryTransaction;
-import com.example.Task3.Services.ServiceAccount;
+
+import com.example.Task3.entities.Account;
+import com.example.Task3.entities.Client;
+import com.example.Task3.entities.Transaction;
+import com.example.Task3.repositories.AccountRepository;
+import com.example.Task3.repositories.ClientRepository;
+import com.example.Task3.repositories.TransactionRepository;
+import com.example.Task3.services.AccountService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
@@ -17,18 +18,19 @@ import java.util.*;
 @Component
 public class TestData implements CommandLineRunner {
 
-    private final RepositoryClient clientRepository;
-    private final RepositoryAccount accountRepository;
-    private final ServiceAccount serviceAccount;
-    private final RepositoryTransaction transactionRepository;
 
-    public TestData(RepositoryClient clientRepository,
-                    RepositoryAccount accountRepository, ServiceAccount serviceAccount,
-                    RepositoryTransaction transactionRepository) {
+    private final ClientRepository clientRepository;
+    private final AccountRepository accountRepository;
+    private final AccountService accountService;
+    private final TransactionRepository transactionRepository;
+
+    public TestData(ClientRepository clientRepository,
+                    AccountRepository accountRepository, AccountService accountService,
+                    TransactionRepository transactionRepository, TransactionRepository transactionRepository1) {
         this.clientRepository = clientRepository;
         this.accountRepository = accountRepository;
-        this.serviceAccount = serviceAccount;
-        this.transactionRepository = transactionRepository;
+        this.accountService = accountService;
+        this.transactionRepository = transactionRepository1;
     }
 
     private final Random random = new Random();
@@ -67,7 +69,7 @@ public class TestData implements CommandLineRunner {
             for (int j = 0; j < countAccounts; j++) {
                 Account account = new Account();
                 account.setClient(client);
-                account.setAccountType(serviceAccount.getRandomAccountType());
+                account.setAccountType(accountService.getRandomAccountType());
                 account.setBalance(random.nextInt(100000));
                 accountRepository.save(account);
 

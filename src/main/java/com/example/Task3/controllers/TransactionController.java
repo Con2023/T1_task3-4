@@ -1,51 +1,50 @@
-package com.example.Task3.Controllers;
+package com.example.Task3.controllers;
 
-import com.example.Task3.CachedAnnotation;
-import com.example.Task3.Entities.Transaction;
+import com.example.Task3.entities.Transaction;
 import com.example.Task3.Metric;
-import com.example.Task3.Services.ServiceTransaction;
+import com.example.Task3.services.TransactionService;
 import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 @RequestMapping("/api/transactions")
-public class ControllerTransaction {
+public class TransactionController {
 
-    private final ServiceTransaction serviceTransaction;
+    private final TransactionService transactionService;
 
-    public ControllerTransaction(ServiceTransaction serviceTransaction) {
-        this.serviceTransaction = serviceTransaction;
+    public TransactionController(TransactionService transactionService) {
+        this.transactionService = transactionService;
     }
 
     @GetMapping("/check")
     public void slowMethod() {
-        serviceTransaction.slowMethod();
+        transactionService.slowMethod();
     }
 
 
     @Metric
     @GetMapping("/{id}")
     public Transaction getTransactionById(@PathVariable Long id) {
-        return serviceTransaction.getTransactionById(id);
+        return transactionService.getTransactionById(id);
     }
 
 
     @Metric
     @PutMapping("/update/{id}")
     public  void updateTransaction(@PathVariable Long id, @RequestBody Transaction transaction) {
-        serviceTransaction.updateTransactionById(id, transaction);
+        transactionService.updateTransactionById(id, transaction);
     }
 
     @Metric
     @DeleteMapping("/delete/{id}")
     public  void deleteTransaction(@PathVariable Long id) {
-        serviceTransaction.deleteTransactionById(id);
+        transactionService.deleteTransactionById(id);
     }
 
     @Metric
     @PostMapping("/save")
     public void createTransaction(@RequestBody Transaction transaction) {
-        serviceTransaction.createTransaction(transaction);
+        transactionService.createTransaction(transaction);
     }
 
 }

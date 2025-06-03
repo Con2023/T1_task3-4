@@ -1,10 +1,12 @@
 package com.example.Task3;
 
-import com.example.Task3.Entities.DataSourceErrorLog;
-import com.example.Task3.Repositories.RepositoryDataSourceErrorLog;
+import com.example.Task3.entities.DataSourceErrorLog;
+import com.example.Task3.repositories.DataSourceErrorLogRepository;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.annotation.Order;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -28,13 +30,14 @@ import java.util.stream.Collectors;
 @Order(1)
 public class DataSourceErrorLogAspect {
 
+    private static final Logger log = LoggerFactory.getLogger(DataSourceErrorLogAspect.class);
     @Value("${kafka.topic.metrics}")
     private String metricsTopic;
 
     private final KafkaTemplate<String, String> kafkaTemplate;
-    private final RepositoryDataSourceErrorLog errorLogRepository;
+    private final  DataSourceErrorLogRepository errorLogRepository;
 
-    public DataSourceErrorLogAspect(RepositoryDataSourceErrorLog errorLogRepository, KafkaTemplate<String, String> kafkaTemplate) {
+    public DataSourceErrorLogAspect(DataSourceErrorLogRepository errorLogRepository, KafkaTemplate<String, String> kafkaTemplate) {
         this.errorLogRepository = errorLogRepository;
         this.kafkaTemplate = kafkaTemplate;
     }
@@ -59,7 +62,13 @@ public class DataSourceErrorLogAspect {
             kafkaTemplate.send(message).get();
 
         } catch (Exception e) {
-            saveToDatabase(joinPoint, ex);
+            try {
+                saveToDatabase(joinPoint, ex);
+            }
+            catch (Exception ex2) {
+               log.error(ex2.getMessage());
+            }
+
 
         }
     }

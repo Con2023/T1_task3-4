@@ -1,42 +1,42 @@
-package com.example.Task3.Controllers;
+package com.example.Task3.controllers;
 
 import com.example.Task3.CachedAnnotation;
-import com.example.Task3.Entities.Account;
-import com.example.Task3.Services.ServiceAccount;
+import com.example.Task3.entities.Account;
+import com.example.Task3.services.AccountService;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.*;
 
 @ComponentScan
 @RestController
 @RequestMapping("/api/accounts")
-public class ControllerAccount {
+public class AccountController {
 
-    private final ServiceAccount serviceAccount;
+    private final AccountService accountService;
 
-    public ControllerAccount(ServiceAccount serviceAccount) {
-        this.serviceAccount = serviceAccount;
+    public AccountController(AccountService accountService) {
+        this.accountService = accountService;
     }
 
     @CachedAnnotation
     @GetMapping("/{id}")
     public Account getAccountById(@PathVariable Long id) {
-        return serviceAccount.getAccountById(id);
+        return accountService.getAccountById(id);
     }
 
     @CachedAnnotation
     @PostMapping("/save")
     public void createAccount(@RequestBody Account account) {
-        serviceAccount.saveAccount(account);
+        accountService.saveAccount(account);
     }
 
     @CachedAnnotation
     @PutMapping("/update/{id}")
     public void updateAccount(@PathVariable Long id, @RequestBody Account account) {
-        serviceAccount.updateAccount(id, account);
+        accountService.updateAccount(id, account);
     }
 
     @DeleteMapping("/delete/{id}")
     public void deleteAccount(@PathVariable Long id) {
-        serviceAccount.deleteAccountById(id);
+        accountService.deleteAccountById(id);
     }
 }

@@ -1,10 +1,10 @@
-package com.example.Task3.Services;
+package com.example.Task3.services;
 
 import com.example.Task3.DataSourceErrorLogAnnotation;
-import com.example.Task3.Entities.Account;
+import com.example.Task3.entities.Account;
 import com.example.Task3.Metric;
-import com.example.Task3.Repositories.RepositoryAccount;
-import com.example.Task3.Repositories.RepositoryTransaction;
+import com.example.Task3.repositories.AccountRepository;
+import com.example.Task3.repositories.TransactionRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.PersistenceException;
 import org.hibernate.exception.ConstraintViolationException;
@@ -17,15 +17,15 @@ import java.util.Random;
 //Расписываем основные операции CRUD, задействуем репозитории для получения данных.
 
 @Service
-public class ServiceAccount {
+public class AccountService {
     Random random = new Random();
 
-    private final RepositoryAccount repositoryAccount;
-    private final RepositoryTransaction repositoryTransaction;
+    private final AccountRepository accountRepository;
+    private final TransactionRepository transactionRepository;
 
-    public ServiceAccount(RepositoryAccount repositoryAccount, RepositoryTransaction repositoryTransaction) {
-        this.repositoryAccount = repositoryAccount;
-        this.repositoryTransaction = repositoryTransaction;
+    public AccountService(AccountRepository accountRepository, TransactionRepository transactionRepository) {
+        this.accountRepository = accountRepository;
+        this.transactionRepository = transactionRepository;
     }
 
     @Metric
@@ -37,7 +37,7 @@ public class ServiceAccount {
         if (id <= 0) {
             throw new RuntimeException("ID must be positive", null);
         }
-        return repositoryAccount.findById(id)
+        return accountRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Account with id " + id + " not found"));
     }
 
@@ -51,7 +51,7 @@ public class ServiceAccount {
             throw new IllegalStateException("Account must have a client");
         }
         try {
-            repositoryAccount.save(account);
+            accountRepository.save(account);
         } catch (ConstraintViolationException ex) {
             throw new RuntimeException("Validation failed: " + ex.getMessage(), ex);
         }
@@ -60,22 +60,22 @@ public class ServiceAccount {
     @Metric
     @DataSourceErrorLogAnnotation
     public void deleteAccountById(Long id) {
-        Account account = repositoryAccount.findById(id)
+        Account account = accountRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Account not found")); // Исключение пробрасывается
 
-        repositoryTransaction.deleteByAccountId(id);
-        repositoryAccount.delete(account);
+        transactionRepository.deleteByAccountId(id);
+        accountRepository.delete(account);
     }
 
     @Metric
     @DataSourceErrorLogAnnotation
     public void updateAccount(Long id, Account account) {
-        Account existingAccount = repositoryAccount.findById(id)
+        Account existingAccount = accountRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Account with id " + id + " not found"));
         existingAccount.setAccountType(account.getAccountType());
         existingAccount.setBalance(account.getBalance());
         try {
-            repositoryAccount.save(existingAccount);
+            accountRepository.save(existingAccount);
         } catch (PersistenceException ex) {
             throw new RuntimeException("Failed to update account with id " + id, ex);
         }
