@@ -1,5 +1,6 @@
 package com.example.Task1.config;
 
+<<<<<<< HEAD
 import com.example.Task1.entities.Account;
 import com.example.Task1.entities.Client;
 import com.example.Task1.entities.Transaction;
@@ -7,6 +8,15 @@ import com.example.Task1.repositories.AccountRepository;
 import com.example.Task1.repositories.ClientRepository;
 import com.example.Task1.repositories.TransactionRepository;
 import com.example.Task1.services.AccountService;
+=======
+import com.example.Task1.Entities.Account;
+import com.example.Task1.Entities.Client;
+import com.example.Task1.Entities.Transaction;
+import com.example.Task1.Repositories.RepositoryAccount;
+import com.example.Task1.Repositories.RepositoryClient;
+import com.example.Task1.Repositories.RepositoryTransaction;
+import com.example.Task1.Services.ServiceAccount;
+>>>>>>> ad223588ce4f39148a8cdf0697c063891461f79d
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
@@ -17,6 +27,7 @@ import java.util.*;
 @Component
 public class TestData implements CommandLineRunner {
 
+<<<<<<< HEAD
     private final ClientRepository clientRepository;
     private final AccountRepository accountRepository;
     private final AccountService accountService;
@@ -28,6 +39,19 @@ public class TestData implements CommandLineRunner {
         this.clientRepository = clientRepository;
         this.accountRepository = accountRepository;
         this.accountService = accountService;
+=======
+    private final RepositoryClient clientRepository;
+    private final RepositoryAccount accountRepository;
+    private final ServiceAccount serviceAccount;
+    private final RepositoryTransaction transactionRepository;
+
+    public TestData(RepositoryClient clientRepository,
+                    RepositoryAccount accountRepository, ServiceAccount serviceAccount,
+                    RepositoryTransaction transactionRepository) {
+        this.clientRepository = clientRepository;
+        this.accountRepository = accountRepository;
+        this.serviceAccount = serviceAccount;
+>>>>>>> ad223588ce4f39148a8cdf0697c063891461f79d
         this.transactionRepository = transactionRepository;
     }
 
@@ -67,7 +91,11 @@ public class TestData implements CommandLineRunner {
             for (int j = 0; j < countAccounts; j++) {
                 Account account = new Account();
                 account.setClient(client);
+<<<<<<< HEAD
                 account.setAccountType(accountService.getRandomAccountType());
+=======
+                account.setAccountType(serviceAccount.getRandomAccountType());
+>>>>>>> ad223588ce4f39148a8cdf0697c063891461f79d
                 account.setBalance(random.nextInt(100000));
                 accountRepository.save(account);
 
